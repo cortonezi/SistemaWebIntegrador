@@ -1,49 +1,142 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+/* Reset básico para remover margens e paddings padrão */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
+/* Define que o corpo da página ocupa toda a altura da janela */
+body {
+    display: flex;
+    flex-direction: column; /* Elementos organizados verticalmente */
+    min-height: 100vh; /* Altura mínima de 100% da janela */
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    background-color: #f4f4f4; /* Fundo cinza claro */
+    color: #333; /* Texto em cinza escuro */
+}
+
+/* Estilização do cabeçalho */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #2c3e50; /* Azul escuro */
+    color: #fff; /* Texto branco */
+    padding: 50px 0;
+}
+
+header h1 {
     text-align: center;
+    
+    font-size: 24px;
+}
+
+/* Menu de navegação */
+nav ul {
+    display: flex; /* Layout horizontal */
+    justify-content: center; /* Centraliza os itens */
+    list-style: none; /* Remove marcadores */
+    background-color: #34495e; /* Azul mais claro */
     padding: 10px 0;
 }
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    background-color: #444;
-    display: flex;
-    justify-content: center;
-}
+
 nav ul li {
-    margin: 0 15px;
+    margin: 0 15px; /* Espaçamento entre os links */
 }
+
 nav ul li a {
     color: #fff;
-    text-decoration: none;
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s; /* Animação suave */
 }
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #fdd835; /* Amarelo */
+    color: #000; /* Texto preto */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+
+/* Conteúdo principal */
 main {
+    flex: 1; /* Ocupa o espaço restante entre o cabeçalho e o rodapé */
     padding: 20px;
+    text-align: center;
 }
+
+.intro {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff; /* Fundo branco */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Formulários */
 form {
-    max-width: 500px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre os campos */
 }
+
 form label {
-    display: block;
-    margin-bottom: 5px;
+    font-weight: bold;
 }
+
 form input, form select, form button {
-    width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
+
 form button {
-    background-color: #333;
+    background-color: #39b54a; /* Verde */
     color: #fff;
-    border: none;
+    font-weight: bold;
     cursor: pointer;
+}
+
+form button:hover {
+    background-color: #2d8c39; /* Verde mais escuro */
+}
+
+/* Rodapé */
+footer {
+    background-color: #2c3e50; /* Azul escuro */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-info p, footer p {
+    margin: 5px 0;
+}
+
+
+/* Galeria de imagens */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar para múltiplas linhas */
+    gap: 20px; /* Espaço entre as imagens */
+    justify-content: center; /* Centraliza as imagens */
+    padding: 20px 0;
+}
+
+.image-gallery .slide-in {
+    width: 300px; /* Largura fixa */
+    height: 200px; /* Altura fixa */
+    overflow: hidden; /* Esconde partes fora do contêiner */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    opacity: 0; /* Invisível inicialmente */
+    transform: translateX(-50px); /* Deslocamento inicial */
+    transition: all 0.8s ease-in-out; /* Animação suave */
+}
+
+/* Ajustar imagens para não serem cortadas */
+.image-gallery .slide-in img {
+    width: 100%; /* Ajusta à largura do contêiner */
+    height: 100%; /* Ajusta à altura do contêiner */
+    object-fit: contain; /* Ajusta a imagem sem cortar */
+    background-color: #f4f4f4; /* Adiciona um fundo para áreas vazias */
 }

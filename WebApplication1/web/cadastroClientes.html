@@ -6,23 +6,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Cabeçalho da página -->
     <header>
-        <h1>Cadastro de Clientes</h1>
+        <div class="container">
+            <h1>Bem-vindo ao Sistema de Troca de Óleo e Suspensão</h1>
+            <nav>
+                <!-- Menu de navegação -->
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="cadastroClientes.html" class="active">Cadastro de Clientes</a></li>
+                    <li><a href="agendamentoServicos.html">Agendamento de Serviços</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
+    <!-- Conteúdo principal -->
     <main>
-        <form onsubmit="return validarFormulario()">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-            <br>
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-            <br>
-            <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone">
-            <br>
-            <button type="submit">Cadastrar</button>
-        </form>
+        <section class="intro">
+            <h2>Cadastro de Clientes</h2>
+            <p>Aqui você pode cadastrar seus clientes para facilitar o agendamento de serviços e o gerenciamento dos dados.</p>
+            <!-- Formulário de cadastro -->
+            <form action="#" method="post">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite o nome completo" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Digite o email" required>
+                
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="Digite o telefone" required>
+                
+                <label for="veiculo">Modelo do Veículo:</label>
+                <input type="text" id="veiculo" name="veiculo" placeholder="Digite o modelo do veículo" required>
+                
+                <button type="submit" class="btn btn-yellow">Cadastrar Cliente</button>
+            </form>
+        </section>
     </main>
+
+    <!-- Rodapé fixado no final da página -->
+    <footer>
+        <div class="footer-info">
+            <p>Telefone: 11 98888-1234</p>
+            <p>Email: <a href="mailto:trocadeoleo@gmail.com">trocadeoleo@gmail.com</a></p>
+            <p>Endereço: Av. Queiros Filho 1234, Santo André - SP</p>
+        </div>
+        <p>&copy; 2024 Sistema de Troca de Óleo e Suspensão. Todos os direitos reservados.</p>
+    </footer>
 </body>
-<script src="script.js"></script>
 </html>
