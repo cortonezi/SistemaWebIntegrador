@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Agendamento de Serviços</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Agendamento de Serviços</h1>
+    </header>
+    <main>
+        <form>
+            <label for="nomeCliente">Nome do Cliente:</label>
+            <input type="text" id="nomeCliente" name="nomeCliente" required>
+            <br>
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" required>
+            <br>
+            <label for="servico">Serviço:</label>
+            <select id="servico" name="servico">
+                <option value="trocaOleo">Troca de Óleo</option>
+                <option value="manutencaoSuspensao">Manutenção de Suspensão</option>
+            </select>
+            <br>
+            <button type="submit">Agendar</button>
+        </form>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
