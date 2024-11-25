@@ -1,78 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Troca de Óleo e Suspensão</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Cabeçalho da página -->
-    <header>
-        <div class="container">
-            <h1>Bem-vindo ao Sistema de Troca de Óleo e Suspensão</h1>
-            <nav>
-                <!-- Menu de navegação -->
-                <ul>
-                    <li><a href="index.html" class="active">Início</a></li>
-                    <li><a href="cadastroClientes.html">Cadastro de Clientes</a></li>
-                    <li><a href="agendamentoServicos.html">Agendamento de Serviços</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sistema de Troca de Óleo e Suspensão</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Cabeçalho da página -->
+        <header>
+            <div class="container">
+                <h1>Bem-vindo ao Sistema de Troca de Óleo e Suspensão</h1>
+                <nav>
+                    <!-- Menu de navegação -->
+                    <ul>
+                        <li><a href="index.html" class="active">Início</a></li>
+                        <li><a href="cadastroClientes.html">Cadastro de Clientes</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-    <!-- Conteúdo principal -->
-    <main>
-        <section class="intro">
-            <h2>Conheça nossos serviços</h2>
-            <p>Gerencie facilmente os serviços de troca de óleo e manutenção de suspensão automotiva.</p>
-        </section>
+        <!-- Conteúdo principal -->
+        <main>
+            <section class="intro">
+                <h2>Conheça nossos serviços</h2>
+                <p>Gerencie facilmente os serviços de troca de óleo e manutenção de suspensão automotiva.</p>
+            </section>
 
-        <!-- Galeria com efeito de deslizar -->
-        <section class="image-gallery">
-            <div class="slide-in">
-                <img src="imagens/amortecedor.jpeg" alt="Troca de óleo">
-            </div>
-            <div class="slide-in">
-                <img src="imagens/oleo_cambio.jpeg" alt="Suspensão">
-            </div>
-            <div class="slide-in">
-                <img src="imagens/oleo_cambio.png" alt="Manutenção">
-            </div>
-            <div class="slide-in">
-                <img src="imagens/oleo_filtro.jpeg" alt="Serviço especializado">
-            </div>
-            <div class="slide-in">
-                <img src="imagens/suspenssao.jpeg" alt="Equipe técnica">
-            </div>
-            <div class="slide-in">
-                <img src="imagens/troca_oleo.jpeg" alt="Resultados eficientes">
-            </div>
-        </section>
-    </main>
+            <!-- Galeria com efeito de deslizar -->
+            <section class="image-gallery">
+                <div class="gallery-item">
+                    <div class="slide-in">
+                        <img src="imagens/amortecedor.jpeg" alt="Suspensão">
+                    </div>
+                    <p class="caption"><a href="suspensao.html">Suspensão</a></p>
+                </div>
+                <div class="gallery-item">
+                    <div class="slide-in">
+                        <img src="imagens/oleo_cambio.jpeg" alt="Câmbio">
+                    </div>
+                    <p class="caption"><a href="cambio.html">Óleo e filtro do câmbio</a></p>
+                </div>
+                <div class="gallery-item">
+                    <div class="slide-in">
+                        <img src="imagens/oleo_filtros.jpg" alt="Filtros e Óleo">
+                    </div>
+                    <p class="caption"><a href="filtros-oleo.html">Óleo e filtro do motor</a></p>
+                </div>
+            </section>
 
-    <!-- Rodapé fixado no final da página -->
-    <footer>
-        <div class="footer-info">
-            <p>Telefone: 11 98888-1234</p>
-            <p>Email: <a href="mailto:trocadeoleo@gmail.com">trocadeoleo@gmail.com</a></p>
-            <p>Endereço: Av. Queiros Filho 1234, Santo André - SP</p>
-        </div>
-        <p>&copy; 2024 Sistema de Troca de Óleo e Suspensão. Todos os direitos reservados.</p>
-    </footer>
+        </main>
 
-    <!-- Script para efeito de deslizar -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const slides = document.querySelectorAll(".slide-in");
-            slides.forEach((slide, index) => {
-                setTimeout(() => {
-                    slide.style.opacity = 1;
-                    slide.style.transform = "translateX(0)";
-                }, index * 500); // Delay de 500ms entre as imagens
+        <!-- Rodapé fixado no final da página -->
+        <footer>
+            <div class="footer-info">
+                <p>Telefone: 11 98888-1234</p>
+                <p>Email: <a href="mailto:trocadeoleo@gmail.com">trocadeoleo@gmail.com</a></p>
+                <p>Endereço: Av. Queiros Filho 1234, Santo André - SP</p>
+            </div>
+            <p>&copy; 2024 Sistema de Troca de Óleo e Suspensão. Todos os direitos reservados.</p>
+        </footer>
+
+        <!-- Script para efeito de deslizar -->
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const slides = document.querySelectorAll(".slide-in");
+                slides.forEach((slide, index) => {
+                    setTimeout(() => {
+                        slide.style.opacity = 1;
+                        slide.style.transform = "translateX(0)";
+                    }, index * 500); // Delay de 500ms entre as imagens
+                });
             });
-        });
-    </script>
-</body>
+        </script>
+    </body>
 </html>
